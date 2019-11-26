@@ -1,7 +1,7 @@
 package com.briup.cms.exception;
 
 /**
- * @program: estore
+ * @program: cms
  * @description: 自定义异常
  * @author: wangzh
  *
