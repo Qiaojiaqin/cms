@@ -35,7 +35,7 @@ public class Swagger2Config {
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
 				.title("看点咨询接口文档")
-				.description("昆山杰普软件科技有限公司，http://www.briup.com")
+				.description("Thanks for jd1914！")
 				.termsOfServiceUrl("http://www.briup.com")
 				.version("1.0")
 				.build();

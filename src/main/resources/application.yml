@@ -6,3 +6,11 @@ spring:
     url: jdbc:mysql://39.96.11.2:3306/cms?useunicode=true;&characterEncoding=utf8
     username: root
     password: root
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

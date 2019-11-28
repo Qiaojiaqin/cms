@@ -14,9 +14,9 @@ public class Category implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ApiModelProperty(value = "栏目id")
     private int id;
-    @ApiModelProperty(value = "栏目编码", required = true)
+    @ApiModelProperty(value = "栏目编码")
     private long code;
-    @ApiModelProperty(value = "栏目名字",required = true)
+    @ApiModelProperty(value = "栏目名字")
     private String name;
 
     public int getId() {
