@@ -1,7 +1,6 @@
-package com.briup.cms.bean;
+package com.briup.cms.bean.ex;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.briup.cms.bean.Article;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -9,16 +8,16 @@ import java.util.List;
 
 @Entity
 @Table(name = "cms_category")
-@ApiModel
-public class Category implements Serializable {
+public class CategoryEX implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ApiModelProperty(value = "栏目id")
     private int id;
-    @ApiModelProperty(value = "栏目编码")
     private long code;
-    @ApiModelProperty(value = "栏目名字")
     private String name;
+
+    @OneToMany
+    @JoinColumn(name = "category_id")
+    private List<Article> articles;
 
     public int getId() {
         return id;
@@ -42,5 +41,13 @@ public class Category implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Article> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
     }
 }

@@ -56,9 +56,9 @@ public class LinkController {
 
     @GetMapping("/findAll")
     @ApiOperation("查询全部链接")
-    public Message<List<Link>> findAll(List<Link> list) {
-        linkService.findAll();
-        return MessageUtil.success();
+    public Message<List<Link>> findAll() {
+        List<Link> list = linkService.findAll();
+        return MessageUtil.success(list);
     }
 
 
